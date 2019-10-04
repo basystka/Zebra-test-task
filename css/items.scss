@@ -1,0 +1,43 @@
+//----------Content. ITEMS-------//
+
+main {
+  .items {
+    width: 1023px;
+    margin: 55px auto;
+    display: flex;
+    // justify-content: space-between;
+    padding-right: 18px;
+    @extend #BorderBox;
+    li {
+      width: 20%;
+      padding-left: 18px;
+      a {
+        display: block;
+        width: 100%;
+        color: #1d1d1d;
+        text-align: center;
+        font-size: 16px;
+        @extend #Transition;
+        img {
+          display: block;
+          width: 100%;
+          color: #cacaca;
+          box-shadow: 0 0 0 1px;
+          margin-bottom: 13px;
+          @extend #Transition;
+        }
+        &:hover,
+        &:focus {
+          color: #818181;
+          img {
+            color: #ff808c;
+          }
+        }
+        &:active,
+        &:active img {
+          color: $active_color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "variables";
+@import "header";
+@import "slider";
+@import "promo";
+@import "categories";
+@import "description";
+@import "items";
+@import "footer";
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeue.ttf);
+}
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeueBd.ttf);
+}
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeueMed.ttf);
+}
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap");
+
+@font-face {
+  font-family: "icomoon";
+  src: url(../fonts/icomoon.eot?p5wppf);
+  src: url(../fonts/icomoon.eot?p5wppf#iefix) format("embedded-opentype"),
+    url(../fonts/icomoon.ttf?p5wppf) format("truetype"),
+    url(../fonts/icomoon.woff?p5wppf) format("woff"),
+    url(../fonts/icomoon.svg?p5wppf#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// + extends
+#BorderBox {
+  box-sizing: border-box;
+}
+#Transition {
+  transition: all 0.15s ease-in 0s;
+}
+// - extends
+
+* {
+  font-family: "HelveticaNeue", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: 400;
+}
+ul li {
+  list-style-type: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+//-----LOGO ZEBRA-------//
+.logo {
+  font-family: "HelveticaNeue";
+  font-weight: 800;
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #626262;
+  span {
+    color: #06b5a9;
+  }
+}

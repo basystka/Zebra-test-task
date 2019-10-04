@@ -1,0 +1,149 @@
+//------HEADER-----//
+header {
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: rgba($main_color, 0.8);
+  box-shadow: 0 0 3px rgba($second_color, 0.5);
+  nav {
+    @extend #BorderBox;
+    width: 1023px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 18px;
+    .menu {
+      display: flex;
+      justify-content: center;
+      padding-left: 100px;
+      li {
+        position: relative;
+        a {
+          display: block;
+          padding: 0 17px;
+          line-height: 86px;
+          color: #626262;
+          font-size: 18px;
+          font-weight: 400;
+          border-bottom: 1px solid transparent;
+          &:hover,
+          &:focus {
+            @extend #Transition;
+          }
+        }
+        &:hover a,
+        &:focus a,
+        a:hover,
+        a:focus {
+          background: $link_hover;
+          color: $main_color;
+          border-bottom: 1px solid #fec8cd;
+        }
+        &:active a,
+        a:active {
+          color: $active_color;
+        }
+        &:nth-child(2) {
+          &:hover div.submenu,
+          &:focus div.submenu {
+            opacity: 1;
+            z-index: 1;
+            @extend #Transition;
+          }
+          &:active div.submenu {
+            color: $active_color;
+          }
+        }
+      }
+      .submenu {
+        width: 600px;
+        height: 300px;
+        display: flex;
+        position: absolute;
+        background: $link_hover;
+        z-index: -1;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          border-right: 1px solid #fec8cd;
+          height: 100%;
+          left: 66.5%;
+        }
+        ul {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          flex-wrap: wrap;
+          padding: 10px 0;
+          li {
+            a {
+              color: $main_color;
+              font-size: 16px;
+              line-height: 16px;
+              padding: 8px 35px;
+              border-bottom: transparent;
+              &:hover,
+              &:focus {
+                background: $main_color;
+                color: $link_hover;
+                border-bottom: transparent;
+              }
+              &:active {
+                color: $active_color;
+              }
+            }
+          }
+        }
+        .logo-submenu {
+          width: 33%;
+          display: block;
+          border-right: 1px solid #fec8cd;
+          &:before {
+            content: "\e908";
+            position: absolute;
+            font-family: icomoon;
+            font-size: 100px;
+            color: $main_color;
+            top: 140px;
+            left: 55px;
+          }
+          h4 {
+            text-transform: uppercase;
+            color: $main_color;
+            font-size: 38px;
+            padding: 20px 50px 18px 25px;
+            border-bottom: 1px solid #fec8cd;
+            span {
+              color: #fec8cd;
+            }
+          }
+        }
+      }
+    }
+    .shopping-bag {
+      display: flex;
+      align-items: center;
+      color: #9d9d9d;
+      font-size: 24px;
+      &::before {
+        font-family: icomoon;
+        content: "\e902";
+        display: block;
+        font-size: 29px;
+        margin: 0 10px 5px 0;
+      }
+      &::after {
+        content: "";
+        border: 7px solid transparent;
+        border-top: 12px solid #9d9d9d;
+        display: block;
+        width: 0;
+        height: 0;
+        margin: 7px 0 0 23px;
+      }
+    }
+  }
+}

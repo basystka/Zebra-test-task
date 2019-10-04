@@ -1,0 +1,94 @@
+//---------Content. DESCRIPTION of item---------//
+
+main {
+  .item-description {
+    width: 1023px;
+    margin: 0 auto;
+    .levis-logo {
+      position: relative;
+      margin-top: -16px;
+      margin-left: 18px;
+      &::before {
+        content: "";
+        display: block;
+        width: 350px;
+        height: 0;
+        border-bottom: 16px solid #6c000a;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        margin-left: -16px;
+        position: absolute;
+      }
+      &::after {
+        content: "\e905";
+        font-family: icomoon;
+        display: block;
+        font-size: 170px;
+        line-height: 1;
+        color: $logo_color;
+        position: absolute;
+      }
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      section {
+        padding-top: 199px;
+        margin-left: 50px;
+        position: relative;
+        h3 {
+          font-size: 50px;
+          font-weight: 600;
+        }
+        .text {
+          font-size: 14px;
+          margin: 15px 0 29px 0;
+        }
+        #add2cart {
+          font-size: 36px;
+          margin: 29px 5px 0 5px;
+          display: flex;
+          justify-content: space-between;
+          span {
+            align-self: flex-end;
+            line-height: 32px;
+            strong {
+              font-weight: 600;
+            }
+          }
+          button {
+            font-size: 28px;
+            background: #d62132;
+            color: $main_color;
+            border: none;
+            cursor: pointer;
+            line-height: 44px;
+            padding: 0px 17px 0px 0;
+            &::before {
+              content: "\e902";
+              font-family: icomoon;
+              display: inline-block;
+              line-height: 44px;
+              font-size: 30px;
+              padding: 0 13px;
+            }
+            &:hover,
+            &:focus {
+              background: rgba(#d62132, 0.9);
+              box-shadow: 1px 1px 2px rgba($second_color, 0.8);
+            }
+            &:active {
+              background: $active_color;
+            }
+          }
+        }
+      }
+      img {
+        margin-left: -71px;
+        width: 477px;
+        min-width: 477px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

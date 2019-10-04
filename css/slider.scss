@@ -1,0 +1,64 @@
+//-------Content. SLIDER-----//
+main {
+  .slider {
+    background-image: url(../img/zebra_slider-blend.jpg);
+    @supports (background-blend-mode: darken) {
+      background-image: url(../img/zebra_slider.jpg);
+      background-color: rgba(#06b5a9, 0.36);
+      background-blend-mode: darken;
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 350px 0 166px 0;
+    color: $main_color;
+    text-transform: uppercase;
+    h2 {
+      font-size: 22px;
+      letter-spacing: 30.5px;
+      text-indent: 23px;
+    }
+    p {
+      font-family: "Impact";
+      font-size: 116px;
+      font-weight: 400;
+      text-shadow: 1px 1px 3px rgba($second_color, 0.8);
+    }
+    .chevron {
+      position: absolute;
+      top: 335px;
+      display: block;
+      transform: scaleX(0.2925);
+      cursor: pointer;
+      opacity: 0.5;
+      &::before {
+        content: "";
+        display: block;
+        width: 101.955px;
+        height: 101.955px;
+        border: 3px solid transparent;
+        border-left-color: $main_color;
+        border-top-color: $main_color;
+      }
+      &.chevron-left {
+        left: 50px;
+        &::before {
+          transform: rotate(-45deg);
+        }
+      }
+      &.chevron-right {
+        right: 50px;
+        &::before {
+          transform: rotate(135deg);
+        }
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+//-----FOOTER----//
+
+footer {
+  background: #1b2330;
+  width: 100%;
+  .wrapper {
+    @extend #BorderBox;
+    width: 1023px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18px;
+    .logo-footer {
+      margin: 21px 0 19px 0;
+      p {
+        color: $main_color;
+        font-size: 16px;
+        margin-top: 2px;
+        opacity: 0.5;
+      }
+    }
+    .social-media {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 29px;
+      li {
+        margin-left: 40px;
+        a {
+          color: $main_color;
+          @extend #Transition;
+          span {
+            display: none;
+          }
+          &::before {
+            display: block;
+            font-family: icomoon;
+            font-size: 30px;
+          }
+        }
+        &:nth-child(1) {
+          a {
+            &::before {
+              content: "\e903";
+            }
+            &:hover,
+            &:focus {
+              color: #3f5c9a;
+            }
+            &:active {
+              color: $active_color;
+            }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            &::before {
+              content: "\e900";
+              font-size: 35px;
+            }
+            &:hover,
+            &:focus {
+              color: #1da1f2;
+            }
+            &:active {
+              color: $active_color;
+            }
+          }
+        }
+        &:nth-child(3) {
+          a {
+            &::before {
+              content: "\e90a";
+            }
+            &:hover,
+            &:focus {
+              color: #fea501;
+            }
+            &:active {
+              color: $active_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
